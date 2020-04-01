@@ -7,6 +7,42 @@
   pointer-events: none;
 }
 
+.FilterableProductTable {
+  border: 1px solid;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 5px;
+}
+
+.ProductTable-header {
+  display: flex;
+  padding: 5px;
+  border: 1px solid;
+  margin-top: 5px;
+  background-color: aqua;
+}
+
+.ProductTable-header > div {
+  width: 50%;
+}
+
+.ProductCategoryRow {
+  background-color: cadetblue;
+}
+
+.ProductRow.stocked {
+  color: red;
+}
+
+.ProductRow {
+  display: flex;
+  border-bottom: 1px solid red;
+}
+
+.ProductRow > div {
+  width: 50%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
