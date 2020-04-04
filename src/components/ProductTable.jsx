@@ -2,7 +2,7 @@ import React from 'react';
 import { ProductCategoryRow } from './ProductCategoryRow';
 import { ProductRow } from './ProductRow';
 
-function ProductTable(props) {
+const ProductTable = (props) => {
     const { data } = props;
     function categoryFiltered(data) {
         const category = data.map(cat => cat.category);
@@ -20,7 +20,7 @@ function ProductTable(props) {
     }
 
     return (
-        <React.Fragment>
+        <>
             <div className="ProductTable-header">
                 <div>Name</div>
                 <div>Price</div>
@@ -43,7 +43,7 @@ function ProductTable(props) {
                      </React.Fragment>
                 })
             }
-        </React.Fragment>
+        </>
     )
 }
 

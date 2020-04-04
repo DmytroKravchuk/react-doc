@@ -1,13 +1,13 @@
 import React from 'react';
 
-function SearchBar(props) {
+const SearchBar = ({filterText, inStockOnly, ...props}) => {
 
     function handleChangeStock(e) {
-        props.listUpdateStock(e.target.checked);
+        props.handleListUpdateStock(e.target.checked);
     }
 
     function handleChangeSeartch(e) {
-        props.listUpdateSearcn(e.target.value);
+        props.handleUpdateListSearch(e.target.value);
     }
 
     return (
@@ -15,13 +15,13 @@ function SearchBar(props) {
             <div>
                 <input type="text" 
                     placeholder="Search..." 
-                    value={props.filterText} 
+                    value={filterText} 
                     onChange={handleChangeSeartch}/>
             </div>
             <div>
                 <input 
                     type="checkbox" 
-                    checked={props.inStockOnly}
+                    checked={inStockOnly}
                     onChange={handleChangeStock} id="stock"/> 
                 <label htmlFor="stock">Only show products in stock</label>
             </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-function ProductRow(props) {
+const ProductRow = ({name, price, stocked}) => {
     return (
-        <div className={`ProductRow ${!props.stocked ? 'stocked': ''}`}>
-            <div>{props.name}</div>
-            <div>{props.price}</div>
+        <div className={`ProductRow ${!stocked ? 'stocked': ''}`}>
+            <div>{name}</div>
+            <div>{price}</div>
         </div>
     )
 }
